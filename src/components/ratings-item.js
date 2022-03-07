@@ -5,31 +5,35 @@ import classnames from 'classnames';
 
 const RatingsItem = ({ rating }) => {
 	const [breakdownToggled, setBreakdownToggled] = useState(false);
-	const rowClass = classnames('review-row', {
+	const bodyClassName = classnames('review-item', {
 		'show-breakdown': breakdownToggled,
 	});
 
 	return (
-		<>
-			<tr className={rowClass}>
-				<th>
+		<tbody className={bodyClassName}>
+			<tr className="review-row">
+				<td className="game-platform">
+					<Platform name={rating.platform} />
+				</td>
+				<td className="game-name">
 					{rating.shortName ? (
 						<abbr title={rating.name}>{rating.shortName}</abbr>
 					) : (
 						rating.name
 					)}
-				</th>
-				<td>
-					<Platform name={rating.platform} />
 				</td>
-				<td>
+				<td className="game-rating">
 					<button
 						className="toggleBreakdown"
 						onClick={() => setBreakdownToggled(!breakdownToggled)}
 					>
-						<StarRating rating={Math.round(rating.score)} />{' '}
-						{rating.score}
+						<StarRating rating={rating.score} showScore={true} />
 					</button>
+					
+				</td>
+			</tr>
+			<tr className="breakdown-row">
+				<td colSpan={3}>
 					<table className="breakdown">
 						<tr>
 							<th>Gameplay</th>
@@ -78,7 +82,7 @@ const RatingsItem = ({ rating }) => {
 					</table>
 				</td>
 			</tr>
-		</>
+		</tbody>
 	);
 };
 

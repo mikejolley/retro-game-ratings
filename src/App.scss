@@ -3,7 +3,7 @@
 html {
 	font: 400 18px 'Bitter', serif;
 	margin: 0;
-	padding: 0 0 6rem;
+	padding: 0;
 	background: $base-color url(./assets/tile.png) repeat;
 }
 
@@ -14,7 +14,7 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	font-size: 1rem;
 	margin: 0;
-	padding: 0 1.5em;
+	padding: .5em 1.5em 6rem;
 }
 
 a {
@@ -73,7 +73,6 @@ h4 {
 		display: flex;
 		flex-wrap:wrap; 
 		align-content: space-between;
-		align-items: flex-end;
 	}
 	.twitch-follow {
 		margin-left: auto;
@@ -160,36 +159,80 @@ table.ratings {
 
 	th,
 	td {
-		padding: 0.75em 1em;
+		padding: 0.75em .5em;
 		vertical-align: middle;
+		text-align: left;
 
 		img {
 			vertical-align: middle;
 			margin-right: 4px;
 		}
+
+		&:first-child {
+			padding-left: 1em;
+		}
+
+		&:last-child {
+			padding-right: 1em;
+		}
 	}
 
 	thead th {
 		border-bottom: 2px solid lighten($base-color, 5%);
+		text-transform: uppercase;
 	}
 
-	tbody tr:nth-child(odd) {
-		th,
-		td {
-			background: $base-color;
+	tbody:nth-child(odd) {
+		tr {
+			th,
+			td {
+				background: $base-color;
+			}
 		}
 	}
 
-	tr > *:nth-child(1) {
-		text-align: left;
-	}
-
-	tr > *:nth-child(2) {
-		text-align: left;
-	}
-
-	tr > *:nth-child(3) {
+	.game-rating {
 		text-align: center;
+		width: 1%;
+	}
+
+	.game-platform {
+		width: 1%;
+	}
+
+	tbody {
+		tr > *:nth-child(1) {
+			padding-left: 1em;
+		}
+	
+		tr > *:nth-child(3) {
+			padding-right: 1em;
+		}
+
+		.breakdown-row {
+			display: none;
+	
+			table.breakdown {
+				width: 100%;
+				margin: 0;
+		
+				th,
+				td {
+					padding: .25em .5em;
+				}
+
+				th {
+					text-align: right;
+					width: 50%;
+				}
+			}
+		}
+
+		&.show-breakdown {
+			.breakdown-row {
+				display: table-row;
+			}
+		}
 	}
 
 	button.toggleBreakdown {
@@ -207,30 +250,83 @@ table.ratings {
 			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 		}
 	}
+}
 
-	table.breakdown {
-		display: none;
-		width: 100%;
-		margin: 0.5em 0 0 0;
-
-		th,
-		td {
-			background: $base-color;
-		}
-	}
-
-	.show-breakdown {
-		table.breakdown {
-			display: table;
-		}
+.site-tools {
+	margin: 1em 0 0;
+	button {
+		border: 1px solid #fff;
+		background: transparent none;
+		cursor: pointer;
+		border-radius: 10px;
+		color: #fff;
+		font-size: 1em;
+		padding: 0.25em 0.5em;
+		margin: 1em;
+		&.on {
+			background-color: white;
+			color: $base-color;
+		}	
 	}
 }
 
 .star-rating {
+	white-space: nowrap;
 	.star {
 		color: $accent-color;
 	}
 	.empty-star {
 		color: lighten($base-color, 10%);
+	}
+}
+
+.panel-mode {
+	font-size: 0.7em;
+	
+	.more {
+		position: absolute;
+		bottom: 0;
+		left: 10px;
+		width: 280px;
+		padding: 10px;
+		color: #fff;
+		background-color: $base-color;
+		font-size: 10px;
+		line-height: 10px;
+		border-top: 2px solid lighten($base-color, 10%);
+		z-index: 10;
+		text-align: center;
+	}
+	.logo,
+	.site-header,
+	.site-footer {
+		display: none;
+	}
+	.site-content {
+		width: 320px;
+		height: 580px;
+		padding: 10px;
+		margin: 0;
+		position: relative;
+		overflow: hidden;
+		outline: 2px solid white;
+		background: $base-color url(./assets/tile.png) repeat;
+
+		&:after {
+			content: '';
+			position: absolute;
+			background: linear-gradient(180deg, rgba(33,40,80,0) 0%, rgba(33,40,80,1) 100%);
+			bottom: 30px;
+			left: 10px;
+			right: 10px;
+			width: 300px;
+			height: 40px;
+		}
+	}
+	table.ratings {
+		margin: 0;
+	}
+	.game-platform img {
+		width: 20px;
 	}
 }

@@ -3,12 +3,11 @@ const RatingsWrapper = ({ children }) => {
 		<table className="ratings" cellSpacing="0" cellPadding="0">
 			<thead>
 				<tr>
-					<th>Game</th>
-					<th>Platform</th>
-					<th>Rating</th>
+					<th className="game-name" colSpan={ 2 }>Game</th>
+					<th className="game-rating">Rating</th>
 				</tr>
 			</thead>
-			<tbody>{children}</tbody>
+			{children}
 		</table>
 	);
 };

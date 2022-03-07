@@ -1,4 +1,5 @@
 import './App.scss';
+import { useState, useRef } from 'react';
 import RatingsWrapper from './components/ratings-wrapper';
 import RatingsList from './components/ratings-list';
 import RatingsItem from './components/ratings-item';
@@ -10,10 +11,20 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import ratings from './ratings.json';
 import { ReactComponent as Logo } from './components/logo.svg';
+import { useScreenshot } from 'use-react-screenshot'
+import classnames from 'classnames';
 
 function App() {
+	const [panelMode, setpanelMode] = useState( false );
+	const appClass = classnames('site-wrapper', {
+		'panel-mode': panelMode,
+	});
+	const ref = useRef(null)
+  	const [image, takeScreenshot] = useScreenshot()
+  	const getImage = () => takeScreenshot(ref.current)
+
 	return (
-		<div className="App">
+		<div className={appClass} >
 			<Logo title="MuffinKiller" className="logo" />
 
 			<header className="site-header">
@@ -26,9 +37,7 @@ function App() {
 							<a href="https://twitch.tv/muffinkiller">Twitch</a>!
 						</p>
 						<p>
-							Each category is rated 1&mdash;5, "5" meaning{' '}
-							<i>excellent</i>, and "1" meaning a{' '}
-							<i>raging pile of 💩</i>.
+							Each category is rated 1 (<i>raging pile of 💩</i>) to 5 (<i>excellent</i>) and combined into a final score out of 5.
 						</p>
 					</div>
 					<div className="twitch-follow">
@@ -42,13 +51,25 @@ function App() {
 					</div>
 				</div>
 			</header>
-			<div className="site-content">
+			<div className="site-content" ref={ref}>
 				<RatingsWrapper>
 					<RatingsList
 						ratings={ratings.ratingsList}
 						template={RatingsItem}
 					/>
 				</RatingsWrapper>
+				{ !! panelMode && (
+					<span className="more">Click to see more!</span>
+				)}
+			</div>
+			<div class="site-tools">
+			<button className={classnames('toggle-panel-button', {'on': panelMode})} onClick={()=>setpanelMode(!panelMode)}>Toggle panel mode</button>
+			{ !! panelMode && (
+				<>
+					<button style={{ marginBottom: '10px' }} onClick={getImage}>Take screenshot</button>
+					{ !! image && ( <img src={image} alt={'Screenshot'} /> ) }
+				</>
+			)}
 			</div>
 			<footer className="site-footer">
 				<ul>

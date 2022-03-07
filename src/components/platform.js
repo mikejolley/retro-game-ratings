@@ -17,8 +17,7 @@ const Platform = ({ name }) => {
 				src={`${process.env.PUBLIC_URL}/assets/${icons[name]}`}
 				alt={altText[name]}
 				title={altText[name]}
-			/>{' '}
-			{name}
+			/>
 		</>
 	);
 };
