@@ -6,6 +6,7 @@ import RatingsItem from './components/ratings-item';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
 	faTwitch,
+	faTwitter,
 	faReact,
 	faFontAwesome,
 } from '@fortawesome/free-brands-svg-icons';
@@ -25,31 +26,20 @@ function App() {
 
 	return (
 		<div className={appClass} >
-			<Logo title="MuffinKiller" className="logo" />
+			<h1><Logo title="MuffinKiller" alt="MuffinKiller" className="logo" /></h1>
 
 			<header className="site-header">
-				<h1>Retro Game Ratings</h1>
-				<div className="columns">
-					<div className="about">
-						<p>
-							This is a collection of reviews for all of the games
-							I've streamed on{' '}
-							<a href="https://twitch.tv/muffinkiller">Twitch</a>!
-						</p>
-						<p>
-							Each category is rated 1 (<i>raging pile of 💩</i>) to 5 (<i>excellent</i>) and combined into a final score out of 5.
-						</p>
-					</div>
-					<div className="twitch-follow">
-						<a
-							href="https://twitch.tv/muffinkiller"
-							target="_blank"
-							rel="noreferrer"
-						>
-							<FontAwesomeIcon icon={faTwitch} /> MuffinKiller
-						</a>
-					</div>
-				</div>
+				<h2>About MuffinKiller</h2>
+				<p>I'm a retro streamer on <a href="https://twitch.tv/muffinkiller">Twitch</a> who plays a plethora of retro video games on original consoles (including NES, SNES, GameCube and Mega Drive/Genesis).</p>
+				<p>Below you'll find links to my channel and social media, as well as a list of reviews for all of the games I've played on Stream.</p>
+				<ul className="links">
+					<li className="twitch-button">
+						<a href="https://twitch.tv/muffinkiller"><FontAwesomeIcon icon={faTwitch} /> Follow on Twitch</a>
+					</li>
+					<li className="twitter-button">
+						<a href="https://twitter.com/muffinkiller86"><FontAwesomeIcon icon={faTwitter} /> Follow on Twitter</a>
+					</li>
+				</ul>
 			</header>
 			<div className="site-content" ref={ref}>
 				<RatingsWrapper>
@@ -62,15 +52,13 @@ function App() {
 					<span className="more">Click to see more!</span>
 				)}
 			</div>
-			<div class="site-tools">
-			<button className={classnames('toggle-panel-button', {'on': panelMode})} onClick={()=>setpanelMode(!panelMode)}>Toggle panel mode</button>
+			
 			{ !! panelMode && (
-				<>
+				<div class="site-tools">
 					<button style={{ marginBottom: '10px' }} onClick={getImage}>Take screenshot</button>
 					{ !! image && ( <img src={image} alt={'Screenshot'} /> ) }
-				</>
+				</div>
 			)}
-			</div>
 			<footer className="site-footer">
 				<ul>
 					<li>
@@ -91,6 +79,7 @@ function App() {
 							/>
 						</a>
 					</li>
+					<li><button className={classnames('toggle-panel-button', {'on': panelMode})} onClick={()=>setpanelMode(!panelMode)}>Toggle panel mode</button></li>
 					<li>
 						<a
 							href="https://mikejolley.com"

@@ -18,9 +18,7 @@ body {
 	padding: .5em 1.5em 6rem;
 
 	@media screen and (min-width: 1000px) {
-		div {
-		   font-size: 24px;
-		}
+		font-size: 24px;
 	}
 }
 
@@ -37,10 +35,26 @@ h2,
 h3,
 h4 {
 	line-height: 1.5;
-	font-weight: 400;
+	font-weight: 700;
 	margin: 0;
 	padding: 0;
-	font-size: 2em;
+	font-size: 1.5em;
+}
+
+button {
+	border: 1px solid #fff;
+	background: transparent none;
+	cursor: pointer;
+	border-radius: 10px;
+	color: #fff;
+	font-size: 1em;
+	padding: 0.25em 0.5em;
+	margin: 0 !important;
+	vertical-align: middle;
+	&.on {
+		background-color: white;
+		color: $base-color;
+	}	
 }
 
 .site-header,
@@ -61,47 +75,61 @@ h4 {
 .site-header {
 	border: 2px solid lighten($base-color, 5%);
 	background: lighten($base-color, 2%);
-	padding: 0;
 	border-radius: 10px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 	padding: 1.5em;
 	opacity: 0.95;
+	margin-bottom: 1em;
 
 	h1 {
 		text-align: left;
 		font-weight: 700;
 	}
+}
 
-	.columns {
-		display: flex;
-		flex-wrap:wrap; 
-		align-content: space-between;
-	}
-	.twitch-follow {
-		margin-left: auto;
-		vertical-align: middle;
+.links {
+	display: flex;
+	flex-wrap: nowrap; 
+	align-content: space-between;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	gap: 1em;
+	text-align: center;
+
+	li {
+		margin: 0;
+		padding: 0;
+		width: 50%;
 
 		a {
-			display: block;
-			border: 2px solid #8d45f7;
-			background: #8d45f7;
-			padding: 1em 1.5em;
-			margin: 0;
-			line-height: 1.5;
-			border-radius: 10px;
-			color: #fff;
 			text-decoration: none;
+			color: #fff;
+			display: block;
+			padding: 1em 1.5em;
+			border-radius: 10px;
 			white-space: nowrap;
+			line-height: 1.5;
 
-			svg {
-				margin-right: 4px;
-			}
-			
 			&:focus,
 			&:hover {
-				border-color: lighten(#8d45f7, 5%);
+				border-color: rgba( 255, 255, 255, 0.1 );
 				box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 			}
+		}
+
+		svg {
+			margin-right: 4px;
+			color: #fff;
+		}
+
+		&.twitch-button a {
+			border: 2px solid #8d45f7;
+			background: #8d45f7;
+		}
+		&.twitter-button a {
+			border: 2px solid #1E9CEA;
+			background: #1E9CEA;
 		}
 	}
 }
@@ -118,16 +146,16 @@ h4 {
 		margin: 0 auto;
 		font-size: 1rem;
 		line-height: 1em;
-		padding: 1em;
+		padding: 1em 2em;
 		list-style: none;
 		display: flex;
-		justify-items: stretch;
 
 		li {
 			margin: 0;
 			padding: 0;
 			flex: 1 1 auto;
 			text-align: center;
+			width: 33.3%;
 			&:first-child {
 				text-align: left;
 			}
@@ -153,7 +181,6 @@ h4 {
 }
 
 table.ratings {
-	margin: 1em auto;
 	width: 100%;
 	border: 2px solid lighten($base-color, 5%);
 	background: lighten($base-color, 2%);
@@ -256,24 +283,6 @@ table.ratings {
 	}
 }
 
-.site-tools {
-	margin: 1em 0 0;
-	button {
-		border: 1px solid #fff;
-		background: transparent none;
-		cursor: pointer;
-		border-radius: 10px;
-		color: #fff;
-		font-size: 1em;
-		padding: 0.25em 0.5em;
-		margin: 1em;
-		&.on {
-			background-color: white;
-			color: $base-color;
-		}	
-	}
-}
-
 .star-rating {
 	white-space: nowrap;
 	.star {
@@ -284,14 +293,19 @@ table.ratings {
 	}
 }
 
+.site-tools {
+	margin: 1em 0;
+	text-align: center;
+	img {
+		display: block;
+		margin: 1em auto;
+	}
+}
+
 .panel-mode {
-	font-size: 0.7em;
-	
 	.more {
-		position: absolute;
-		bottom: 0;
-		left: 10px;
-		width: 280px;
+		display: block;
+		margin-top: -6px;
 		padding: 10px;
 		color: #fff;
 		background-color: $base-color;
@@ -301,36 +315,18 @@ table.ratings {
 		z-index: 10;
 		text-align: center;
 	}
-	.logo,
-	.site-header,
-	.site-footer {
-		display: none;
-	}
 	.site-content {
 		width: 320px;
-		height: 580px;
-		padding: 10px;
-		margin: 0;
 		position: relative;
-		overflow: hidden;
-		outline: 2px solid white;
-		background: $base-color url(./assets/tile.png) repeat;
-
-		&:after {
-			content: '';
-			position: absolute;
-			background: linear-gradient(180deg, rgba(33,40,80,0) 0%, rgba(33,40,80,1) 100%);
-			bottom: 30px;
-			left: 10px;
-			right: 10px;
-			width: 300px;
-			height: 40px;
-		}
+		background-color: #0E0E0F;
 	}
 	table.ratings {
-		margin: 0;
-	}
-	.game-platform img {
-		width: 20px;
+		font-size: 12px !important;
+		.review-item:nth-of-type(n+16) {
+			display: none;
+		}
+		.game-platform img {
+			width: 20px;
+		}
 	}
 }
