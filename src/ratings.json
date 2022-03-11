@@ -376,6 +376,18 @@
 				"challenge": 3,
 				"slant": 2
 			}
+		},
+		{
+			"name": "Ghouls 'n Ghosts",
+			"platform": "Mega Drive",
+			"ratings": {
+				"gameplay": 4,
+				"graphics": 4,
+				"music": 4,
+				"replay": 4,
+				"challenge": 5,
+				"slant": 5
+			}
 		}
 	]
 }
