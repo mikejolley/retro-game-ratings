@@ -285,11 +285,22 @@ table.ratings {
 
 .star-rating {
 	white-space: nowrap;
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
 	.star {
 		color: $accent-color;
 	}
+	.half-star {
+		color: $accent-color;
+		font-size: 0.5em;
+		margin: 0.25em;
+	}
 	.empty-star {
 		color: lighten($base-color, 10%);
+	}
+	.score {
+		margin-left: 0.25em;
 	}
 }
 

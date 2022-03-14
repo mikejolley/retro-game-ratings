@@ -35,50 +35,52 @@ const RatingsItem = ({ rating }) => {
 			<tr className="breakdown-row">
 				<td colSpan={3}>
 					<table className="breakdown">
-						<tr>
-							<th>Gameplay</th>
-							<td>
-								<StarRating rating={rating.ratings.gameplay} />
-							</td>
-						</tr>
-						<tr>
-							<th>Graphics / Animations</th>
-							<td>
-								<StarRating rating={rating.ratings.graphics} />
-							</td>
-						</tr>
-						<tr>
-							<th>Music / Sounds</th>
-							<td>
-								<StarRating rating={rating.ratings.music} />
-							</td>
-						</tr>
-						<tr>
-							<th>Replayability / Length</th>
-							<td>
-								<StarRating rating={rating.ratings.replay} />
-							</td>
-						</tr>
-						<tr>
-							<th>Challenge / Fairness</th>
-							<td>
-								<StarRating rating={rating.ratings.challenge} />
-							</td>
-						</tr>
-						<tr>
-							<th>Personal Slant</th>
-							<td>
-								<StarRating rating={rating.ratings.slant} />
-							</td>
-						</tr>
-						<tr>
-							<th>
-								<strong>Total</strong>
-							</th>
-							<td>
-								<StarRating rating={Math.round(rating.score)} />
-							</td>
-						</tr>
+						<tbody>
+							<tr>
+								<th>Gameplay</th>
+								<td>
+									<StarRating rating={rating.ratings.gameplay} />
+								</td>
+							</tr>
+							<tr>
+								<th>Graphics / Animations</th>
+								<td>
+									<StarRating rating={rating.ratings.graphics} />
+								</td>
+							</tr>
+							<tr>
+								<th>Music / Sounds</th>
+								<td>
+									<StarRating rating={rating.ratings.music} />
+								</td>
+							</tr>
+							<tr>
+								<th>Replayability / Length</th>
+								<td>
+									<StarRating rating={rating.ratings.replay} />
+								</td>
+							</tr>
+							<tr>
+								<th>Challenge / Fairness</th>
+								<td>
+									<StarRating rating={rating.ratings.challenge} />
+								</td>
+							</tr>
+							<tr>
+								<th>Personal Slant</th>
+								<td>
+									<StarRating rating={rating.ratings.slant} />
+								</td>
+							</tr>
+							<tr>
+								<th>
+									<strong>Total</strong>
+								</th>
+								<td>
+									<StarRating rating={rating.score} />
+								</td>
+							</tr>
+						</tbody>
 					</table>
 				</td>
 			</tr>
