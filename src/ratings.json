@@ -388,6 +388,18 @@
 				"challenge": 5,
 				"slant": 5
 			}
+		},
+		{
+			"name": "Super Ghouls 'n Ghosts",
+			"platform": "SNES",
+			"ratings": {
+				"gameplay": 4,
+				"graphics": 4.5,
+				"music": 4.5,
+				"replay": 4,
+				"challenge": 3,
+				"slant": 5
+			}
 		}
 	]
 }
