@@ -472,6 +472,18 @@
 				"challenge": 4,
 				"slant": 4
 			}
+		},
+		{
+			"name": "Mega Man 7",
+			"platform": "NES",
+			"ratings": {
+				"gameplay": 4,
+				"graphics": 5,
+				"music": 4,
+				"replay": 4,
+				"challenge": 3,
+				"slant": 4
+			}
 		}
 	]
 }
