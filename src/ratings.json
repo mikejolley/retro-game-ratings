@@ -496,6 +496,18 @@
 				"challenge": 3,
 				"slant": 4
 			}
+		},
+		{
+			"name": "Mega Man 5",
+			"platform": "NES",
+			"ratings": {
+				"gameplay": 4,
+				"graphics": 4,
+				"music": 3,
+				"replay": 4,
+				"challenge": 3,
+				"slant": 4
+			}
 		}
 	]
 }
