@@ -412,6 +412,18 @@
 				"challenge": 4,
 				"slant": 3
 			}
+		},
+		{
+			"name": "Super Metroid",
+			"platform": "SNES",
+			"ratings": {
+				"gameplay": 5,
+				"graphics": 5,
+				"music": 5,
+				"replay": 4,
+				"challenge": 4,
+				"slant": 5
+			}
 		}
 	]
 }
