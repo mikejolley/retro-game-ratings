@@ -448,6 +448,18 @@
 				"challenge": 3,
 				"slant": 3
 			}
+		},
+		{
+			"name": "Mega Man 6",
+			"platform": "NES",
+			"ratings": {
+				"gameplay": 5,
+				"graphics": 4,
+				"music": 4,
+				"replay": 4,
+				"challenge": 4,
+				"slant": 4
+			}
 		}
 	]
 }
