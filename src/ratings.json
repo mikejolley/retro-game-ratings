@@ -400,6 +400,18 @@
 				"challenge": 3,
 				"slant": 5
 			}
+		},
+		{
+			"name": "Alcahest",
+			"platform": "SNES",
+			"ratings": {
+				"gameplay": 4,
+				"graphics": 4,
+				"music": 3,
+				"replay": 3,
+				"challenge": 4,
+				"slant": 3
+			}
 		}
 	]
 }
