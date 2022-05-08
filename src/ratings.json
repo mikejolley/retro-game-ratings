@@ -460,6 +460,18 @@
 				"challenge": 4,
 				"slant": 4
 			}
+		},
+		{
+			"name": "Mega Man 4",
+			"platform": "NES",
+			"ratings": {
+				"gameplay": 5,
+				"graphics": 4,
+				"music": 4,
+				"replay": 4,
+				"challenge": 4,
+				"slant": 4
+			}
 		}
 	]
 }
