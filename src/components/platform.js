@@ -4,7 +4,7 @@ const Platform = ({ name }) => {
 		SNES: 'snes.png',
 		'Mega Drive': 'md.png',
 		GameCube: 'gamecube.png',
-		SATURN: 'saturn.png',
+		"Sega Saturn": 'saturn.png',
 		PLAYSTATION: 'playstation.png',
 	};
 	const altText = {
@@ -12,7 +12,7 @@ const Platform = ({ name }) => {
 		SNES: 'Super Nintendo',
 		'Mega Drive': 'Sega Mega Drive / Genesis',
 		GameCube: 'Nintendo GameCube',
-		SATURN: 'Sega Saturn',
+		"Sega Saturn": 'Sega Saturn',
 		PLAYSTATION: 'Sony Playstation',
 	};
 	return (
