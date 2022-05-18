@@ -520,6 +520,18 @@
 				"challenge": 5,
 				"slant": 4
 			}
+		},
+		{
+			"name": "MegaMan 8",
+			"platform": "Sega Saturn",
+			"ratings": {
+				"gameplay": 4,
+				"graphics": 5,
+				"music": 3,
+				"replay": 4,
+				"challenge": 4,
+				"slant": 4
+			}
 		}
 	]
 }
