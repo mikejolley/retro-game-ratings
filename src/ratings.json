@@ -544,6 +544,18 @@
 				"challenge": 4,
 				"slant": 5
 			}
+		},
+		{
+			"name": "Mega Man & Bass",
+			"platform": "SNES",
+			"ratings": {
+				"gameplay": 4,
+				"graphics": 5,
+				"music": 3,
+				"replay": 4,
+				"challenge": 4,
+				"slant": 4
+			}
 		}
 	]
 }
