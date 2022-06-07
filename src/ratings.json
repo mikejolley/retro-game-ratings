@@ -532,6 +532,18 @@
 				"challenge": 4,
 				"slant": 4
 			}
+		},
+		{
+			"name": "Castlevania",
+			"platform": "NES",
+			"ratings": {
+				"gameplay": 5,
+				"graphics": 4,
+				"music": 4,
+				"replay": 4,
+				"challenge": 4,
+				"slant": 5
+			}
 		}
 	]
 }
