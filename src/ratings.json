@@ -556,6 +556,18 @@
 				"challenge": 4,
 				"slant": 4
 			}
+		},
+		{
+			"name": "Castlevania: Bloodlines",
+			"platform": "Mega Drive",
+			"ratings": {
+				"gameplay": 5,
+				"graphics": 5,
+				"music": 5,
+				"replay": 4,
+				"challenge": 4,
+				"slant": 5
+			}
 		}
 	]
 }
