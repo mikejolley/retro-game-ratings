@@ -568,6 +568,18 @@
 				"challenge": 4,
 				"slant": 5
 			}
+		},
+		{
+			"name": "Kabuki Quantum Fighter",
+			"platform": "NES",
+			"ratings": {
+				"gameplay": 3,
+				"graphics": 2,
+				"music": 5,
+				"replay": 3,
+				"challenge": 3,
+				"slant": 4
+			}
 		}
 	]
 }
