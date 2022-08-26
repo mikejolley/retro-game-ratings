@@ -580,6 +580,18 @@
 				"challenge": 3,
 				"slant": 4
 			}
+		},
+		{
+			"name": "Revenge of the Shinobi",
+			"platform": "Mega Drive",
+			"ratings": {
+				"gameplay": 4,
+				"graphics": 4,
+				"music": 5,
+				"replay": 4,
+				"challenge": 3,
+				"slant": 3
+			}
 		}
 	]
 }
