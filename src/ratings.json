@@ -592,6 +592,18 @@
 				"challenge": 3,
 				"slant": 3
 			}
+		},
+		{
+			"name": "Mr. Gimmick",
+			"platform": "NES",
+			"ratings": {
+				"gameplay": 4.5,
+				"graphics": 5,
+				"music": 5,
+				"replay": 5,
+				"challenge": 4.5,
+				"slant": 5
+			}
 		}
 	]
 }
