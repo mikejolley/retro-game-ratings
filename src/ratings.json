@@ -604,6 +604,18 @@
 				"challenge": 4.5,
 				"slant": 5
 			}
+		},
+		{
+			"name": "Super Castlevania IV",
+			"platform": "SNES",
+			"ratings": {
+				"gameplay": 4.5,
+				"graphics": 4,
+				"music": 4,
+				"replay": 5,
+				"challenge": 5,
+				"slant": 4.5
+			}
 		}
 	]
 }
