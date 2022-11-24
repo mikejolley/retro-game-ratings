@@ -616,6 +616,18 @@
 				"challenge": 5,
 				"slant": 4.5
 			}
+		},
+		{
+			"name": "Mega Turrican",
+			"platform": "Mega Drive",
+			"ratings": {
+				"gameplay": 4,
+				"graphics": 3,
+				"music": 3,
+				"replay": 4,
+				"challenge": 4,
+				"slant": 4
+			}
 		}
 	]
 }
