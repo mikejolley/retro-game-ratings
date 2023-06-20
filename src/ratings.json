@@ -628,6 +628,18 @@
 				"challenge": 4,
 				"slant": 4
 			}
+		},
+		{
+			"name": "Gargoyles Quest 2",
+			"platform": "NES",
+			"ratings": {
+				"gameplay": 4,
+				"graphics": 3.5,
+				"music": 3,
+				"replay": 4,
+				"challenge": 4,
+				"slant": 4
+			}
 		}
 	]
 }
