@@ -640,6 +640,18 @@
 				"challenge": 4,
 				"slant": 4
 			}
+		},
+		{
+			"name": "Rocket Knight Adventures",
+			"platform": "Mega Drive",
+			"ratings": {
+				"gameplay": 5,
+				"graphics": 5,
+				"music": 4.5,
+				"replay": 4,
+				"challenge": 4,
+				"slant": 5
+			}
 		}
 	]
 }
